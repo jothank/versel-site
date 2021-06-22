@@ -21,13 +21,13 @@
 </head>
 <body>
 	<!-- Navigation -->
-	<div class="main-nav">
+	<div class="main-nav" id="menu">
 		<div class="container">
 			<header class="group top-nav">
 				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
 				    <span class="logo">Jonathan</span>
 				</div>
-			    <nav id="navbar-1" class="navbar item-nav">
+			    <nav id="navbar-1" class="navbar item-nav" href="#menu">
 				    <ul>
 				        <li class="active"><a href="#about">Sobre</a></li>
 						<li><a href="#education">Educação</a></li>
@@ -127,6 +127,15 @@
 		</div>
 	</div>
 
+	<!-- Retorn Top -->	
+	<div class="award section second" id="menu">
+		<div class="container">
+			<ul class="award-list list-flat">
+                <li><a href="#menu">Retorno ao Topo</a></li>
+			</ul>
+		</div>
+	</div>		
+
 	<!-- Quote -->
 	<div class="quote">
 		<div class="container text-centered">
@@ -161,7 +170,7 @@
 		// Change to edit type effect
 		strings: ["Ao meu site pessoal", "Ao meu Portfólio", "A minha página"],
 
-		typeSpeed:150,backDelay:900,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
+		typeSpeed:120,backDelay:900,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
     </script>
 </body>
 </html>
