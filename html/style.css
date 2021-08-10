@@ -22,7 +22,7 @@
 
 #link {
     text-decoration: none;
-    color: rgb(105, 0, 180);
+    color: rgb(120, 0, 206);
     font-weight: bold;
 }
 
@@ -32,6 +32,6 @@
 }
 
 h1, h2, h3 {
-    color:indigo;
+    color:rgb(89, 0, 153);
     font-weight: bold;
 }
