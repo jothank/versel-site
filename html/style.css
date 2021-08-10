@@ -11,6 +11,11 @@
     border-radius: 1%;  
 }
 
+#video {
+    width: 90%;
+    height: 90%; 
+}
+
 #cabecalho {
     text-align: center; 
 }
