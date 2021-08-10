@@ -1,5 +1,5 @@
 .corpo {
-    width: 65%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
@@ -23,8 +23,15 @@
 #link {
     text-decoration: none;
     color: indigo;
+    font-weight: bold;
+}
+
+#link2 {
+    text-decoration: none;
+    color: black;
 }
 
 h1, h2, h3 {
     color:indigo;
+    font-weight: bold;
 }
