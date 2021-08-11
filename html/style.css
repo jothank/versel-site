@@ -1,11 +1,11 @@
 .corpo {
     width: 60%;
-    padding: 7px;
+    padding: 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
     background-color: rgb(250, 250, 250);
-    border-radius: 1%;
+    border-radius: 2%;
     border-style: ridge;
 }
 
