@@ -1,159 +1,244 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="html/style.css">
     <title>O Que é HTML? Guia Básico Para Iniciantes</title>
 </head>
+
 <body>
-<div class="corpo">
-    <div id="cabecalho">
-        <h1><b>O Que é HTML? Guia Básico Para Iniciantes</b></h1>
+    <div class="corpo">
+        <div id="cabecalho">
+            <h1><b>O Que é HTML? Guia Básico Para Iniciantes</b></h1>
+        </div>
+        <div>
+            <center><img id="imagem" src="html/img01.png"></center>
+        </div>
+        <div>
+            <p><b>HTML</b> significa <b>Hypertext Markup Language.</b> Ele permite que os usuários criem e estruturem
+                seções, parágrafos, cabeçalhos e links para páginas da internet ou aplicações.</p>
+            <p>O HTML não é uma linguagem de programação, isso significa que não pode ser usado para criar
+                funcionalidades dinâmicas. Entretanto, o HTML possibilita a organização e formatação de documentos,
+                similar ao Microsoft Word.</p>
+            <p>Ao trabalhar com HTML simplesmente codificamos estruturas (tags e atributos) para marcar a página de um
+                site. Por exemplo, podemos criar um parágrafo colocando o texto entre as tags <b>&lt;p> e &lt;/p></b>.
+            </p>
+            <blockquote>&lt;p>Assim você cria um parágrafo com HTML.&lt;/p></blockquote>
+            <blockquote>&lt;p>Você pode criar vários!&lt;/p></blockquote>
+        </div>
+        <div>
+            <h2>Conteúdo</h2>
+            <ul>
+                <li><a href="#html" id="link">O Que É HTML – Vídeo</a></li>
+                <li><a href="#historia" id="link">A História do HTML</a></li>
+                <li><a href="#funciona" id="link">Como o HTML Funciona?</a></li>
+                <li><a href="#revisao" id="link">Revisão das Tags HTML mais Utilizadas</a></li>
+                <li><a href="#evolucao" id="link">A Evolução do HTML. Qual a diferença entre HTML e HTML5?</a></li>
+                <li><a href="#prosecontra" id="link">Prós e Contras do HTML</a></li>
+                <li><a href="#relacao" id="link">Qual a Relação Entre HTML, CSS e JavaScript?</a></li>
+                <li><a href="#oquee" id="link">Então… O que é HTML?</a></li>
+            </ul>
+        </div>
+        <div id="html">
+            <h2>O Que é HTML – Vídeo</h2>
+            <center>
+                <p><iframe id="video" src="https://www.youtube.com/embed/UL7FaZjBbyM"></iframe></p>
+            </center>
+        </div>
+        <div id="historia">
+            <h2>A História do HTML</h2>
+            <p>O HTML foi inventado por <a id="link2" href="https://pt.wikipedia.org/wiki/Tim_Berners-Lee">Tim
+                    Berners-Lee</a>, um físico do centro de pesquisas CERN, na Suíça. Ele surgiu com a ideia de um
+                sistema de hipertexto na internet.</p>
+            <p>Hipertexto significa um texto que possui referências (links) para outros textos que podem ser acessados
+                imediatamente. Ele publicou a primeira versão do HTML em 1991, consistindo em 18 tags. Desde então cada
+                versão do HTML vem com novas tags e atributos (modificadores de tags).</p>
+            <p>De acordo com o <a id="link2" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element">Elemento
+                    de Referência do HTML</a>, do Mozilla Developer Network, atualmente existem 140 tags HTML, mesmo que
+                algumas delas já estejam obsoletas (não mais suportadas pelos navegadores).</p>
+            <p>Devido a rápida ascensão e popularidade, o HTML é agora considerado um padrão oficial da web. As
+                especificações do HTML são mantidas e desenvolvidas pelo Consórcio World Wide Web (W3C). Você pode
+                conferir a última versão da linguagem no <a id="link2" href="https://www.w3c.br/Home/WebHome/">site do
+                    W3C</a>.</p>
+            <p>O maior upgrade da linguagem foi o lançamento do <b>HTML5</b> em 2014. Diversas novas tags semânticas
+                foram adicionadas que revelam o significado do seu próprio conteúdo, como <b>&lt;article>, &lt;header>,
+                    e &lt;footer></b>.</p>
+        </div>
+        <div id="funciona">
+            <h2>Como o HTML Funciona?</h2>
+            <p>Documentos HTML são arquivos com as extensões <b>.html</b> ou <b>.htm</b>. Eles podem ser visualizados
+                com qualquer navegador (como Google Chrome, Safari, ou Mozilla Firefox). O navegador faz a leitura do
+                arquivo e renderiza seu conteúdo para visualização dos usuários.</p>
+            <p>Geralmente sites comuns possuem diversas <a id="link2"
+                    href="https://www.hostinger.com.br/tutoriais/estrutura-de-site-para-empresa/">páginas HTML</a>. Por
+                exemplo: homepages, páginas explicando o propósito do site, e páginas de contato teriam documentos HTML
+                distintos.</p>
+            <p>Cada página HTML consiste em uma série de <b>tags</b> (também chamadas de <b>elementos</b>), que podem
+                ser consideradas os blocos de construção das páginas. Elas criam uma hierarquia que estrutura o conteúdo
+                entre seções, parágrafos, cabeçalhos e outros blocos de conteúdo.</p>
+            <p>A maioria dos elementos HTML utilizam as sintaxe de abertura e fechamento como <b>&lt;tag> e
+                    &lt;/tag></b>.</p>
+            <p>Abaixo temos um exemplo de como os elementos HTML podem ser estruturados:</p>
+            <blockquote>&lt;div></blockquote>
+            <blockquote>&lt;h1>Cabeçalho principal&lt;/h1></blockquote>
+            <blockquote>&lt;h2>Subtítulo de impacto&lt;/h2></blockquote>
+            <blockquote>&lt;p>Parágrafo um&lt;/p></blockquote>
+            <blockquote>&lt;img src="/" alt="Image"></blockquote>
+            <blockquote>&lt;p>Parágrafo dois com &lt;a href="https://example.com">hyperlink&lt;/a>&lt;/p></blockquote>
+            <blockquote>&lt;/div></blockquote>
+            <ul>
+                <li>O elemento superior é uma divisão <b>(&lt;div>&lt;/div>)</b> que pode ser utilizada para marcar
+                    seções de conteúdo maiores.</li>
+                <p>
+                    <li>Contém um cabeçalho <b>(&lt;h1>&lt;/h1>)</b>, subtítulo <b>(&lt;h2>&lt;/h2>)</b>, dois
+                        parágrafos <b>(&lt;p>&lt;/p>)</b>, e uma imagem <b>(&lt;img>)</b>.</li>
+                <p>
+                    <li>O segundo parágrafo inclui um link <b>(&lt;a>&lt;/a>)</b> com um atributo href que contém a URL
+                        de destino.</li>
+                <p>
+                    <li>A tag de imagem também possui dois atributos: <b>src</b> para o caminho da imagem e <b>alt</b>
+                        para a descrição da imagem.</li>
+                <p>
+            </ul>
+        </div>
+        <div id="revisao">
+            <h2>Revisão das Tags HTML mais Utilizadas</h2>
+            <p>As HTML tags possuem dois tipos principais: <b>elementos bloco</b> e <b>elementos em linha</b>.</p>
+            <ol>
+                <li>Elementos bloco utilizam todo o espaço disponível e começam uma nova linha no documento. Cabeçalhos
+                    e parágrafos são bons exemplos de elementos bloco.</li>
+                <p>
+                    <li>Elementos em linha utilizam apenas o espaço necessário e não criar uma quebra de linha. Eles
+                        geralmente são utilizados para formatar os elementos dentro de um elemento bloco. Links e
+                        strings enfatizadas são bons exemplos de elementos em linha.</li>
+            </ol>
+            <h3>Tags de Elementos Bloco</h3>
+            <p>Os três elementos bloco que todo documento HTML precisa conter são <b>&lt;html>, &lt;head>, e
+                    &lt;body></b>.</p>
+            <ol>
+                <li>A tag <b>&lt;html>&lt;/html></b> é o elemento de maior nível que está em todas as páginas HTML.</li>
+                <p>
+                    <li>A tag <b>&lt;head>&lt;/head></b> possui informações do meta como o título e charset da página.
+                    </li>
+                <p>
+                    <li>Finalmente, a tag <b>&lt;body>&lt;/body></b> engloba todos os elementos que são mostrados na
+                        página.</li>
+                <p>
+            </ol>
+            <blockquote>&lt;html></blockquote>
+            <blockquote>&lt;head></blockquote>
+            <blockquote>&lt;!-- META --></blockquote>
+            <blockquote>&lt;/head></blockquote>
+            <blockquote>&lt;body></blockquote>
+            <blockquote>&lt;!-- CONTEÚDO DA PÁGINA --></blockquote>
+            <blockquote>&lt;/body></blockquote>
+            <blockquote>&lt;/html></blockquote>
+            <ul>
+                <li>Os cabeçalhos possuem 6 níveis no HTML. Eles englobam desde <b>&lt;h1>&lt;/h1></b> até
+                    <b>&lt;h6>&lt;/h6></b>, onde o h1 é o maior nível e h6 o menor. Parágrafos possuem as tags
+                    <b>&lt;p>&lt;/p></b>, enquanto os blockquotes (ou elementos HTML de citação de blocos) utilizam a
+                    tag <b>&lt;blockquote>&lt;/blockquote></b>.</li>
+                <p>
+                    <li>Divisões são seções de conteúdo maiores que geralmente possuem parágrafos, imagens, de vez em
+                        quando blockquotes, e outros elementos menores. Podemos marcá-los com as tags
+                        <b>&lt;div>&lt;/div></b>. Um elemento div pode conter outro elemento div dentro.</li>
+                <p>
+                    <li>Você também pode utilizar as tags <b>&lt;ol>&lt;/ol></b> para listas ordenadas e
+                        <b>&lt;ul>&lt;/ul></b> para desordenadas. Itens individuais da lista devem conter as tags
+                        <b>&lt;li>&lt;/li></b>. Por exemplo, uma lista não ordenada fica assim no HTML:</li>
+                <p>
+            </ul>
+            <blockquote>&lt;ul></blockquote>
+            <blockquote>&nbsp; &nbsp; &lt;li>Item da lista 1&lt;/li></blockquote>
+            <blockquote>&nbsp; &nbsp; &lt;li>Item da lista 1&lt;/li></blockquote>
+            <blockquote>&nbsp; &nbsp; &lt;li>Item da lista 1&lt;/li></blockquote>
+            <blockquote>&lt;/ul></blockquote>
+            <h3>Tags de Elementos em Linha</h3>
+            <p>Muitos elementos em linhas são utilizados na formatação de textos. Por exemplo, uma tag
+                <b>&lt;strong>&lt;/strong></b> renderiza um elemento em negrito, enquanto as tags &lt;em>&lt;/em>
+                mostram em itálico.</p>
+            <p>Hyperlinks também são elementos em linha que utilizam as tags <b>&lt;a>&lt;/a></b> e o atributo
+                <b>href</b> para indicar a destinação do link:</p>
+            <blockquote>&lt;a href="https://exemplo.com/">Clique aqui!&lt;/a></blockquote>
+            <p>Imagens também são elementos em linha. Você pode adicionar uma com a tag <b>&lt;img></b> sem a
+                necessidade de fechamento. Mas você também precisa utilizar o atributo <b>src</b> para especificar o
+                caminho da imagem, por exemplo:</p>
+            <blockquote>&lt;img src="/images/exemplo.jpg" alt="Imagem exemplo"></blockquote>
+        </div>
+        <div id="evolucao">
+            <h2>A Evolução do HTML. Qual a diferença entre HTML e HTML5?</h2>
+            <p>Desde seu lançamento o HTML tem passado por muitas evoluções. O W3C constantemente publica novas versões
+                e atualizações, enquanto que marcas históricas também recebem nomes dedicados.</p>
+            <p>O HTML4 (comumente referido apenas como “HTML”) foi publicado em 1999, enquanto que a maior e mais
+                recente atualização foi lançada em 2014. Chamada de <b>HTML5</b>, a atualização introduziu diversos
+                novos recursos à linguagem.</p>
+            <p>Um dos mais aguardados é a incorporação nativa de vídeos e arquivos de áudios. Ao invés de precisar
+                utilizar o Flash Player, agora é possível incorporar vídeos e áudios com as novas tags
+                <b>&lt;audio>&lt;/audio></b> e <b>&lt;video>&lt;/video></b>. Ele também possui compatibilidade com SVG
+                (vetor gráfico escalável) e MathML para fórmulas científicas e matemáticas.</p>
+            <p>O HTML5 também introduziu algumas melhorias de semântica. As novas tags semânticas informam ao navegador
+                sobre o significado do conteúdo, o que auxilia tanto os leitores quanto os mecanismos de busca.</p>
+            <p>As tags semânticas mais populares são <b>&lt;article>&lt;/article>, &lt;section>&lt;/section>,
+                    &lt;aside>&lt;/aside>, &lt;header>&lt;/header>, e &lt;footer>&lt;/footer></b>.</p>
+        </div>
+        <div id="prosecontra">
+            <h2>Prós e Contras do HTML</h2>
+            <p>Como na maioria das coisas, o HTML possui diversos pontos positivos e negativos.</p>
+            <p><b>Prós:</b></p>
+            <ul>
+                <li>Uma linguagem amplamente utilizada com diversos recursos e uma comunidade gigante;</li>
+                <li>Roda em todos os navegadores;</li>
+                <li>Fácil aprendizado;</li>
+                <li>Totalmente grátis e de código-aberto;</li>
+                <li>Marcações limpas e consistentes;</li>
+                <li>Os padrões oficiais da internet são mantidos pelo Consórcio World Wide Web (W3C);</li>
+                <li>Integração fácil com com linguagens de back-end como <a id="link2"
+                        href="https://www.hostinger.com.br/tutoriais/php/">PHP</a> e Node.js.</li>
+            </ul>
+            <p><b>Contras:</b></p>
+            <ul>
+                <li>Geralmente utilizado para páginas estáticas. Para funcionalidade dinâmicas você provavelmente vai
+                    precisar usar JavaScript ou outra linguagem de back-end como PHP;</li>
+                <li>Não permite a implementação de lógica. Por isso todas as páginas precisam ser criadas separadamente,
+                    mesmo se utilizares os mesmos elementos, como cabeçalhos e rodapés;</li>
+                <li>Alguns navegadores demoram para adotar novos recursos;</li>
+                <li>O comportamento do navegador é algumas vezes difícil de prever (ex. navegadores antigos muitas vezes
+                    não renderizam novas tags).</li>
+            </ul>
+        </div>
+        <div id="relacao">
+            <h2>Qual a Relação Entre HTML, CSS e JavaScript?</h2>
+            <p>Mesmo que o HTML seja uma linguagem poderosa, não é o suficiente para criar um site profissional e
+                responsivo. Ele pode ser utilizado apenas para adicionar elementos de texto e criação de estruturas de
+                conteúdo.</p>
+            <p>Porém o HTML funciona muito bem com outras duas linguagens de front-end: <a id="link2"
+                    href="https://www.hostinger.com.br/tutoriais/o-que-e-css-guia-basico-de-css">CSS (Cascading Style
+                    Sheets)</a>, e <a id="link2"
+                    href="https://www.hostinger.com.br/tutoriais/o-que-e-javascript">JavaScript</a>. Juntos eles
+                proporcionam a implementação de funcionalidades avançadas e uma ótima experiência ao usuário.</p>
+            <ul>
+                <li>O CSS é responsável pelo estilo como background, cores, layouts, espaçamentos, e animações.</li>
+                <li>O JavaScript permite a adição de funcionalidades dinâmicas como sliders, pop-ups, e galerias de
+                    fotos.</li>
+            </ul>
+            <p>Imagine o HTML como uma pessoa nua, o CSS como as roupas, e o JavaScript como os movimentos e ações.</p>
+        </div>
+        <div id="oquee">
+            <h2>Então… O que é HTML?</h2>
+            <p>O HTML é a principal linguagem de marcação da internet. Ele roda nativamente em todos os navegadores e é
+                mantido pelo Consórcio World Wide Web (W3C).</p>
+            <p>Você pode utilizá-lo para criar estruturas de conteúdos de sites e aplicações web. É o mais básico das
+                tecnologias de front-end que serve como base de estilização com CSS e funcionalidades implementadas com
+                JavaScript.</p>
+        </div>
+        <br>
+        <div id="fim">
+            <center>Clonado por Jonathan Carlos Costa para fins educativos.</center>
+            <center><a id="link2" href="https://www.hostinger.com.br/tutoriais/o-que-e-html-conceitos-basicos"
+                    target="_blank">https://www.hostinger.com.br/tutoriais/o-que-e-html-conceitos-basicos</a></center>
+        </div>
     </div>
-    <div>
-       <center><img id="imagem" src="html/img01.png"></center>
-    </div>
-    <div>
-        <p><b>HTML</b> significa <b>Hypertext Markup Language.</b> Ele permite que os usuários criem e estruturem seções, parágrafos, cabeçalhos e links para páginas da internet ou aplicações.</p>
-        <p>O HTML não é uma linguagem de programação, isso significa que não pode ser usado para criar funcionalidades dinâmicas. Entretanto, o HTML possibilita a organização e formatação de documentos, similar ao Microsoft Word.</p>
-        <p>Ao trabalhar com HTML simplesmente codificamos estruturas (tags e atributos) para marcar a página de um site. Por exemplo, podemos criar um parágrafo colocando o texto entre as tags <b>&lt;p> e &lt;/p></b>.</p>
-        <blockquote>&lt;p>Assim você cria um parágrafo com HTML.&lt;/p></blockquote>
-        <blockquote>&lt;p>Você pode criar vários!&lt;/p></blockquote>
-    </div>
-    <div>
-        <h2>Conteúdo</h2>
-        <ul>
-            <li><a href="#html" id="link">O Que É HTML – Vídeo</a></li>
-            <li><a href="#historia" id="link">A História do HTML</a></li>
-            <li><a href="#funciona" id="link">Como o HTML Funciona?</a></li>						
-            <li><a href="#revisao" id="link">Revisão das Tags HTML mais Utilizadas</a></li>
-            <li><a href="#evolucao" id="link">A Evolução do HTML. Qual a diferença entre HTML e HTML5?</a></li>
-            <li><a href="#prosecontra" id="link">Prós e Contras do HTML</a></li>
-            <li><a href="#relacao" id="link">Qual a Relação Entre HTML, CSS e JavaScript?</a></li>
-            <li><a href="#oquee" id="link">Então… O que é HTML?</a></li>
-        </ul>
-    </div>
-    <div id="html">
-        <h2>O Que é HTML – Vídeo</h2>
-        <center><p><iframe id="video" src="https://www.youtube.com/embed/UL7FaZjBbyM"></iframe></p></center>
-    </div>
-    <div id="historia">
-        <h2>A História do HTML</h2>
-        <p>O HTML foi inventado por <a id="link2" href="https://pt.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a>, um físico do centro de pesquisas CERN, na Suíça. Ele surgiu com a ideia de um sistema de hipertexto na internet.</p>
-        <p>Hipertexto significa um texto que possui referências (links) para outros textos que podem ser acessados imediatamente. Ele publicou a primeira versão do HTML em 1991, consistindo em 18 tags. Desde então cada versão do HTML vem com novas tags e atributos (modificadores de tags).</p>
-        <p>De acordo com o <a id="link2" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element">Elemento de Referência do HTML</a>, do Mozilla Developer Network, atualmente existem 140 tags HTML, mesmo que algumas delas já estejam obsoletas (não mais suportadas pelos navegadores).</p>
-        <p>Devido a rápida ascensão e popularidade, o HTML é agora considerado um padrão oficial da web. As especificações do HTML são mantidas e desenvolvidas pelo Consórcio World Wide Web (W3C). Você pode conferir a última versão da linguagem no <a id="link2" href="https://www.w3c.br/Home/WebHome/">site do W3C</a>.</p>
-        <p>O maior upgrade da linguagem foi o lançamento do <b>HTML5</b> em 2014. Diversas novas tags semânticas foram adicionadas que revelam o significado do seu próprio conteúdo, como  <b>&lt;article>, &lt;header>, e &lt;footer></b>.</p>
-    </div>
-    <div id="funciona">
-        <h2>Como o HTML Funciona?</h2>
-        <p>Documentos HTML são arquivos com as extensões <b>.html</b> ou <b>.htm</b>. Eles podem ser visualizados com qualquer navegador (como Google Chrome, Safari, ou Mozilla Firefox). O navegador faz a leitura do arquivo e renderiza seu conteúdo para visualização dos usuários.</p>
-        <p>Geralmente sites comuns possuem diversas <a id="link2" href="https://www.hostinger.com.br/tutoriais/estrutura-de-site-para-empresa/">páginas HTML</a>. Por exemplo: homepages, páginas explicando o propósito do site, e páginas de contato teriam documentos HTML distintos.</p>
-        <p>Cada página HTML consiste em uma série de <b>tags</b> (também chamadas de <b>elementos</b>), que podem ser consideradas os blocos de construção das páginas. Elas criam uma hierarquia que estrutura o conteúdo entre seções, parágrafos, cabeçalhos e outros blocos de conteúdo.</p>
-        <p>A maioria dos elementos HTML utilizam as sintaxe de abertura e fechamento como <b>&lt;tag> e &lt;/tag></b>.</p>
-        <p>Abaixo temos um exemplo de como os elementos HTML podem ser estruturados:</p>
-        <blockquote>&lt;div></blockquote>
-        <blockquote>&lt;h1>Cabeçalho principal&lt;/h1></blockquote>
-        <blockquote>&lt;h2>Subtítulo de impacto&lt;/h2></blockquote>
-        <blockquote>&lt;p>Parágrafo um&lt;/p></blockquote>
-        <blockquote>&lt;img src="/" alt="Image"></blockquote>
-        <blockquote>&lt;p>Parágrafo dois com &lt;a href="https://example.com">hyperlink&lt;/a>&lt;/p></blockquote>
-        <blockquote>&lt;/div></blockquote>
-        <ul>
-            <li>O elemento superior é uma divisão <b>(&lt;div>&lt;/div>)</b> que pode ser utilizada para marcar seções de conteúdo maiores.</li><p>
-            <li>Contém um cabeçalho <b>(&lt;h1>&lt;/h1>)</b>, subtítulo <b>(&lt;h2>&lt;/h2>)</b>, dois parágrafos <b>(&lt;p>&lt;/p>)</b>, e uma imagem <b>(&lt;img>)</b>.</li><p>
-            <li>O segundo parágrafo inclui um link <b>(&lt;a>&lt;/a>)</b> com um atributo href que contém a URL de destino.</li><p>
-            <li>A tag de imagem também possui dois atributos: <b>src</b> para o caminho da imagem e <b>alt</b> para a descrição da imagem.</li><p>
-        </ul>
-    </div>
-    <div id="revisao">
-        <h2>Revisão das Tags HTML mais Utilizadas</h2>
-        <p>As HTML tags possuem dois tipos principais: <b>elementos bloco</b> e <b>elementos em linha</b>.</p>
-        <ol>
-            <li>Elementos bloco utilizam todo o espaço disponível e começam uma nova linha no documento. Cabeçalhos e parágrafos são bons exemplos de elementos bloco.</li><p>
-            <li>Elementos em linha utilizam apenas o espaço necessário e não criar uma quebra de linha. Eles geralmente são utilizados para formatar os elementos dentro de um elemento bloco. Links e strings enfatizadas são bons exemplos de elementos em linha.</li>
-        </ol>
-        <h3>Tags de Elementos Bloco</h3>
-        <p>Os três elementos bloco que todo documento HTML precisa conter são <b>&lt;html>, &lt;head>, e &lt;body></b>.</p>
-        <ol>
-            <li>A tag <b>&lt;html>&lt;/html></b> é o elemento de maior nível que está em todas as páginas HTML.</li><p>
-            <li>A tag <b>&lt;head>&lt;/head></b> possui informações do meta como o título e charset da página.</li><p>
-            <li>Finalmente, a tag <b>&lt;body>&lt;/body></b> engloba todos os elementos que são mostrados na página.</li><p>
-        </ol>
-        <blockquote>&lt;html></blockquote>
-        <blockquote>&lt;head></blockquote>
-        <blockquote>&lt;!-- META --></blockquote>
-        <blockquote>&lt;/head></blockquote>
-        <blockquote>&lt;body></blockquote>
-        <blockquote>&lt;!-- CONTEÚDO DA PÁGINA --></blockquote>
-        <blockquote>&lt;/body></blockquote>
-        <blockquote>&lt;/html></blockquote>
-        <ul>
-            <li>Os cabeçalhos possuem 6 níveis no HTML. Eles englobam desde <b>&lt;h1>&lt;/h1></b> até <b>&lt;h6>&lt;/h6></b>, onde o h1 é o maior nível e h6 o menor. Parágrafos possuem as tags <b>&lt;p>&lt;/p></b>, enquanto os blockquotes (ou elementos HTML de citação de blocos) utilizam a tag <b>&lt;blockquote>&lt;/blockquote></b>.</li><p>
-            <li>Divisões são seções de conteúdo maiores que geralmente possuem parágrafos, imagens, de vez em quando blockquotes, e outros elementos menores. Podemos marcá-los com as tags <b>&lt;div>&lt;/div></b>. Um elemento div pode conter outro elemento div dentro.</li><p>
-            <li>Você também pode utilizar as tags <b>&lt;ol>&lt;/ol></b> para listas ordenadas e <b>&lt;ul>&lt;/ul></b> para desordenadas. Itens individuais da lista devem conter as tags <b>&lt;li>&lt;/li></b>. Por exemplo, uma lista não ordenada fica assim no HTML:</li><p>
-        </ul>
-        <blockquote>&lt;ul></blockquote>
-        <blockquote>&nbsp; &nbsp; &lt;li>Item da lista 1&lt;/li></blockquote>
-        <blockquote>&nbsp; &nbsp; &lt;li>Item da lista 1&lt;/li></blockquote>
-        <blockquote>&nbsp; &nbsp; &lt;li>Item da lista 1&lt;/li></blockquote>
-        <blockquote>&lt;/ul></blockquote>
-        <h3>Tags de Elementos em Linha</h3>
-        <p>Muitos elementos em linhas são utilizados na formatação de textos. Por exemplo, uma tag <b>&lt;strong>&lt;/strong></b> renderiza um elemento em negrito, enquanto as tags &lt;em>&lt;/em> mostram em itálico.</p>
-        <p>Hyperlinks também são elementos em linha que utilizam as tags <b>&lt;a>&lt;/a></b> e o atributo <b>href</b> para indicar a destinação do link:</p>      
-        <blockquote>&lt;a href="https://exemplo.com/">Clique aqui!&lt;/a></blockquote>
-        <p>Imagens também são elementos em linha. Você pode adicionar uma com a tag <b>&lt;img></b> sem a necessidade de fechamento. Mas você também precisa utilizar o atributo <b>src</b> para especificar o caminho da imagem, por exemplo:</p>
-        <blockquote>&lt;img src="/images/exemplo.jpg" alt="Imagem exemplo"></blockquote>
-    </div>
-    <div id="evolucao">
-        <h2>A Evolução do HTML. Qual a diferença entre HTML e HTML5?</h2>
-        <p>Desde seu lançamento o HTML tem passado por muitas evoluções. O W3C constantemente publica novas versões e atualizações, enquanto que marcas históricas também recebem nomes dedicados.</p>
-        <p>O HTML4 (comumente referido apenas como “HTML”) foi publicado em 1999, enquanto que a maior e mais recente atualização foi lançada em 2014. Chamada de <b>HTML5</b>, a atualização introduziu diversos novos recursos à linguagem.</p>
-        <p>Um dos mais aguardados é a incorporação nativa de vídeos e arquivos de áudios. Ao invés de precisar utilizar o Flash Player, agora é possível incorporar vídeos e áudios com as novas tags <b>&lt;audio>&lt;/audio></b> e <b>&lt;video>&lt;/video></b>. Ele também possui compatibilidade com SVG (vetor gráfico escalável) e MathML para fórmulas científicas e matemáticas.</p>
-        <p>O HTML5 também introduziu algumas melhorias de semântica. As novas tags semânticas informam ao navegador sobre o significado do conteúdo, o que auxilia tanto os leitores quanto os mecanismos de busca.</p>
-        <p>As tags semânticas mais populares são <b>&lt;article>&lt;/article>, &lt;section>&lt;/section>, &lt;aside>&lt;/aside>, &lt;header>&lt;/header>, e &lt;footer>&lt;/footer></b>.</p>
-    </div>
-    <div id="prosecontra">
-        <h2>Prós e Contras do HTML</h2>
-        <p>Como na maioria das coisas, o HTML possui diversos pontos positivos e negativos.</p>
-        <p><b>Prós:</b></p>
-        <ul>
-            <li>Uma linguagem amplamente utilizada com diversos recursos e uma comunidade gigante;</li>
-            <li>Roda em todos os navegadores;</li>
-            <li>Fácil aprendizado;</li>
-            <li>Totalmente grátis e de código-aberto;</li>
-            <li>Marcações limpas e consistentes;</li>
-            <li>Os padrões oficiais da internet são mantidos pelo Consórcio World Wide Web (W3C);</li>
-            <li>Integração fácil com com linguagens de back-end como <a id="link2" href="https://www.hostinger.com.br/tutoriais/php/">PHP</a> e Node.js.</li>
-        </ul>
-        <p><b>Contras:</b></p>
-        <ul>
-            <li>Geralmente utilizado para páginas estáticas. Para funcionalidade dinâmicas você provavelmente vai precisar usar JavaScript ou outra linguagem de back-end como PHP;</li>
-            <li>Não permite a implementação de lógica. Por isso todas as páginas precisam ser criadas separadamente, mesmo se utilizares os mesmos elementos, como cabeçalhos e rodapés;</li>
-            <li>Alguns navegadores demoram para adotar novos recursos;</li>
-            <li>O comportamento do navegador é algumas vezes difícil de prever (ex. navegadores antigos muitas vezes não renderizam novas tags).</li>
-        </ul>
-    </div>
-    <div id="relacao">
-        <h2>Qual a Relação Entre HTML, CSS e JavaScript?</h2>
-        <p>Mesmo que o HTML seja uma linguagem poderosa, não é o suficiente para criar um site profissional e responsivo. Ele pode ser utilizado apenas para adicionar elementos de texto e criação de estruturas de conteúdo.</p>
-        <p>Porém o HTML funciona muito bem com outras duas linguagens de front-end: <a id="link2" href="https://www.hostinger.com.br/tutoriais/o-que-e-css-guia-basico-de-css">CSS (Cascading Style Sheets)</a>, e <a id="link2" href="https://www.hostinger.com.br/tutoriais/o-que-e-javascript">JavaScript</a>. Juntos eles proporcionam a implementação de funcionalidades avançadas e uma ótima experiência ao usuário.</p>
-        <ul>
-            <li>O CSS é responsável pelo estilo como background, cores, layouts, espaçamentos, e animações.</li>
-            <li>O JavaScript permite a adição de funcionalidades dinâmicas como sliders, pop-ups, e galerias de fotos.</li>
-        </ul>
-        <p>Imagine o HTML como uma pessoa nua, o CSS como as roupas, e o JavaScript como os movimentos e ações.</p>
-    </div>
-    <div id="oquee">
-        <h2>Então… O que é HTML?</h2>
-        <p>O HTML é a principal linguagem de marcação da internet. Ele roda nativamente em todos os navegadores e é mantido pelo Consórcio World Wide Web (W3C).</p>
-        <p>Você pode utilizá-lo para criar estruturas de conteúdos de sites e aplicações web. É o mais básico das tecnologias de front-end que serve como base de estilização com CSS e funcionalidades implementadas com JavaScript.</p>
-    </div>
-    <br>
-    <div id="fim">
-        <center>Clonado por Jonathan Carlos Costa para fins educativos.</center>
-        <center><a id="link2" href="https://www.hostinger.com.br/tutoriais/o-que-e-html-conceitos-basicos" target="_blank">https://www.hostinger.com.br/tutoriais/o-que-e-html-conceitos-basicos</a></center>    
-    </div>
-</div>
 </body>
+
 </html>
