@@ -19,50 +19,91 @@
     <div class="corpo">
         <div>
             <h3>Resumo</h3>
-            <p align="justify">HTML5 é a próxima geração do HTML. É um padrão aberto e suportado pela maioria dos novos navegadores. Suas novas funcionalidades o tornam uma alternativa à tecnologia proprietária Adobe Flash. Este artigo descreve o uso do HTML5 no desenvolvimento de jogos online dentro do navegador. Foram criados dois jogos, o Sukuri e o Jogo da Velha para investigar e exemplificar a utilização desse novo padrão.</p>
+            <p align="justify">HTML5 é a próxima geração do HTML. É um padrão aberto e suportado pela maioria dos novos
+                navegadores. Suas novas funcionalidades o tornam uma alternativa à tecnologia proprietária Adobe Flash.
+                Este artigo descreve o uso do HTML5 no desenvolvimento de jogos online dentro do navegador. Foram
+                criados dois jogos, o Sukuri e o Jogo da Velha para investigar e exemplificar a utilização desse novo
+                padrão.</p>
             <p><b>Palavras-Chave:</b> HTML5, JavaScript, Canvas, Desenvolvimento de Jogos</p>
             <p><b>Contato dos Autores:</b> {jucimar.jr, elmiliox}<u>@gmail.com</u></p>
         </div>
         <div>
             <h3>1. Introdução</h3>
-            <p align="justify">A grande maioria dos jogos incorporados ao navegador é construída usando Adobe Flash. Além de jogos, essa tecnologia é usado em animações, banners, como tocador de vídeo e muitas outras aplicações. A Adobe afirma que 98% dos navegadores possuem sua tecnologia instalada e que a mesma é aberta, segura e com bom desempenho [Adobe 2010]. Isso era aceito pela comunidade web sem grandes controvérsias. Tudo mudou quando a Apple disse que não incorporaria o Adobe Flash aos seus novos produtos iPhone e iPad por considerá-lo com muitos erros, sem segurança e consumidor voraz de bateria [Apple 2010]. A Apple divulgou que o futuro seria o uso de HTML5 em detrimento ao Flash [Apple 2010]. Jogada de marketing ou não, essa opinião foi logo seguida pela Microsoft, Google, Opera e outras empresas. Essa afirmação da Apple acabou deixando o HTML5 em destaque.</p>
-            <p align="justify">HTML5 tem como objetivo padrão facilitar e melhorar a estruturação e a apresentação conteúdo na Web através de novas tags e incorporar funcionalidades como o uso de canvas, tocar vídeos, <i>drag-and-drop</i> que antes só eram possíveis através do uso de plugins proprietários como Adobe Flash e Microsoft Silverlight. Ele é um padrão aberto, livre do pagamento de <i>royalties</i>. Apesar do lançamento oficial do HTML5 ser apenas em 2012 [Whatwg 2009], já é possível construir sites usando esse padrão, pois os navegadores novos (Firefox 3.6, Firefox Beta 4, Safari 5, Internet Explorer 8, Opera 10, Chrome 6) são aderentes de alguma maneira ao novo padrão.</p>
-            <p align="justify">O objetivo deste artigo é demonstrar o uso do HTML5 como substituto do Adobe Flash no desenvolvimento de jogos simples incorporados ao navegador. A Seção 2 mostra os trabalhos relacionados; a Seção 3 explica o funcionamento da tag <i>canvas</i> do HTML5; a Seção 4 mostra o desenvolvimento do Jogo da Velha; a Seção 5 mostra o desenvolvimento do jogo Sukuri; a Seção 6 mostra as considerações do artigo e trabalhos futuros.</p>
-        </div>    
+            <p align="justify">A grande maioria dos jogos incorporados ao navegador é construída usando Adobe Flash.
+                Além de jogos, essa tecnologia é usado em animações, banners, como tocador de vídeo e muitas outras
+                aplicações. A Adobe afirma que 98% dos navegadores possuem sua tecnologia instalada e que a mesma é
+                aberta, segura e com bom desempenho [Adobe 2010]. Isso era aceito pela comunidade web sem grandes
+                controvérsias. Tudo mudou quando a Apple disse que não incorporaria o Adobe Flash aos seus novos
+                produtos iPhone e iPad por considerá-lo com muitos erros, sem segurança e consumidor voraz de bateria
+                [Apple 2010]. A Apple divulgou que o futuro seria o uso de HTML5 em detrimento ao Flash [Apple 2010].
+                Jogada de marketing ou não, essa opinião foi logo seguida pela Microsoft, Google, Opera e outras
+                empresas. Essa afirmação da Apple acabou deixando o HTML5 em destaque.</p>
+            <p align="justify">HTML5 tem como objetivo padrão facilitar e melhorar a estruturação e a apresentação
+                conteúdo na Web através de novas tags e incorporar funcionalidades como o uso de canvas, tocar vídeos,
+                <i>drag-and-drop</i> que antes só eram possíveis através do uso de plugins proprietários como Adobe
+                Flash e Microsoft Silverlight. Ele é um padrão aberto, livre do pagamento de <i>royalties</i>. Apesar do
+                lançamento oficial do HTML5 ser apenas em 2012 [Whatwg 2009], já é possível construir sites usando esse
+                padrão, pois os navegadores novos (Firefox 3.6, Firefox Beta 4, Safari 5, Internet Explorer 8, Opera 10,
+                Chrome 6) são aderentes de alguma maneira ao novo padrão.</p>
+            <p align="justify">O objetivo deste artigo é demonstrar o uso do HTML5 como substituto do Adobe Flash no
+                desenvolvimento de jogos simples incorporados ao navegador. A Seção 2 mostra os trabalhos relacionados;
+                a Seção 3 explica o funcionamento da tag <i>canvas</i> do HTML5; a Seção 4 mostra o desenvolvimento do
+                Jogo da Velha; a Seção 5 mostra o desenvolvimento do jogo Sukuri; a Seção 6 mostra as considerações do
+                artigo e trabalhos futuros.</p>
+        </div>
         <div>
             <h3>2. Trabalhos relacionados</h3>
-            <p align="justify">Os trabalhos estão dentro dos sites das empresas desenvolvedoras de navegadores ou de padrões da Web. Pode-se citar que o site de desenvolvimento do Opera explica como trabalhar com HTML5 nesse navegador [Opera 2010]. O site da <i>World Wide Web Consortium</i> (W3C) mostra como funciona a tag canvas do HTML5 [W3c 2010]. O site de desenvolvimento do WebKit da Apple mostra um tutorial sobre o uso de HTML5 [Webkit 2010].</p>
-        </div>   
+            <p align="justify">Os trabalhos estão dentro dos sites das empresas desenvolvedoras de navegadores ou de
+                padrões da Web. Pode-se citar que o site de desenvolvimento do Opera explica como trabalhar com HTML5
+                nesse navegador [Opera 2010]. O site da <i>World Wide Web Consortium</i> (W3C) mostra como funciona a
+                tag canvas do HTML5 [W3c 2010]. O site de desenvolvimento do WebKit da Apple mostra um tutorial sobre o
+                uso de HTML5 [Webkit 2010].</p>
+        </div>
         <div>
-            <h3>3. Funcionamento da tag	canvas HTML5</h3>
-            <p align="justify">O Canvas é um novo elemento do HTML5 que permite “desenhar” diretamente dentro uma página Web. Sua <i>tag</i> de marcação é: &lt;canvas> &lt;/canvas>  e possui apenas dois atributos que são <i>width</i> e <i>height</i> que definem as dimensões do canvas no HTML. Se o navegador não suportar a tag, nada será mostrado, nem mesmo mensagem de erro. É possível então colocar um pequeno texto para passar o <i>feedback</i>:</p>
-            <p align="justify">&lt;canvas width="320" height="240" id="canvas" ><br> &lt;p>O seu browser não suporta o canvas&lt;/p><br>&lt;/canvas></p>
-            <p align="justify">Se o navegador suportar a tag, esta pode ser manipulada pelo JavaScript. Por enquanto é possível apenas manipular em 2D ( 2 dimensões ). Está em desenvolvimento o <i>WebGL</i> [WebGL 2010] que permitirá criar figuras 3D.</p>
-        </div>   
+            <h3>3. Funcionamento da tag canvas HTML5</h3>
+            <p align="justify">O Canvas é um novo elemento do HTML5 que permite “desenhar” diretamente dentro uma página
+                Web. Sua <i>tag</i> de marcação é: &lt;canvas> &lt;/canvas> e possui apenas dois atributos que são
+                <i>width</i> e <i>height</i> que definem as dimensões do canvas no HTML. Se o navegador não suportar a
+                tag, nada será mostrado, nem mesmo mensagem de erro. É possível então colocar um pequeno texto para
+                passar o <i>feedback</i>:</p>
+            <p align="justify">&lt;canvas width="320" height="240" id="canvas" ><br> &lt;p>O seu browser não suporta o
+                canvas&lt;/p><br>&lt;/canvas></p>
+            <p align="justify">Se o navegador suportar a tag, esta pode ser manipulada pelo JavaScript. Por enquanto é
+                possível apenas manipular em 2D ( 2 dimensões ). Está em desenvolvimento o <i>WebGL</i> [WebGL 2010] que
+                permitirá criar figuras 3D.</p>
+        </div>
         <div>
-            <h4>3.1	Desenhando no Canvas</h4>
-            <p align="justify">O canvas possui como forma primitiva apenas o retângulo. Para produzir formas complexas é preciso desenhar o <i>path</i>, um caminho que será traçado dentro do canvas. Para isso existe uma <i>Application Programming Interface</i> (API) específica. A partir de funções simples se desenham formas complexas. Para isso utiliza-se um ponteiro que cada vez que é movido, vai “riscando” por onde passa</p>
-        </div>   
+            <h4>3.1 Desenhando no Canvas</h4>
+            <p align="justify">O canvas possui como forma primitiva apenas o retângulo. Para produzir formas complexas é
+                preciso desenhar o <i>path</i>, um caminho que será traçado dentro do canvas. Para isso existe uma
+                <i>Application Programming Interface</i> (API) específica. A partir de funções simples se desenham
+                formas complexas. Para isso utiliza-se um ponteiro que cada vez que é movido, vai “riscando” por onde
+                passa</p>
+        </div>
         <div>
-            <h4>3.2	Utilizando Imagens</h4>
-            <p align="justify">O canvas permite utilizar imagens e aplicá-las diretamente. São suportados os formatos de imagem utilizados na Web como .gif, .jpg e .png .</p>
-        </div>   
+            <h4>3.2 Utilizando Imagens</h4>
+            <p align="justify">O canvas permite utilizar imagens e aplicá-las diretamente. São suportados os formatos de
+                imagem utilizados na Web como .gif, .jpg e .png .</p>
+        </div>
         <div>
-            <h4>3.3	Utilizando texto</h4>
-            <p align="justify">O canvas possui uma API para aplicação de texto desprovida de recursos avançados.   Toda a formatação e posicionamento do texto ficam sobre responsabilidade do desenvolvedor. Formatar o texto usando <i>Cascade Style Sheets</i> (CSS) produz resultado superior ao que o canvas pode prover.</p>
-        </div>   
+            <h4>3.3 Utilizando texto</h4>
+            <p align="justify">O canvas possui uma API para aplicação de texto desprovida de recursos avançados. Toda a
+                formatação e posicionamento do texto ficam sobre responsabilidade do desenvolvedor. Formatar o texto
+                usando <i>Cascade Style Sheets</i> (CSS) produz resultado superior ao que o canvas pode prover.</p>
+        </div>
         <div>
-            <h4>3.4	Exemplo completo de desenho no canvas com HTML5</h4>
-            <p align="justify">Para exemplificar o uso das funcionalidades mostradas nas subseções anteriores, uma bandeira do Brasil foi desenhada diretamente do canvas usando o JavaScript.</p>
+            <h4>3.4 Exemplo completo de desenho no canvas com HTML5</h4>
+            <p align="justify">Para exemplificar o uso das funcionalidades mostradas nas subseções anteriores, uma
+                bandeira do Brasil foi desenhada diretamente do canvas usando o JavaScript.</p>
             <center><img src="artigo/image003.png"></center>
             <h6 align="center">Figura 2: Bandeira do Brasil desenhada somente com HTML5 canvas e JavaScript.</h6>
-        </div>   
+        </div>
         <div>
             <h4>Crie uma página HTML com o conteúdo:</h4>
             <p align="justify">&lt;canvas width="320" height="240" id="canvas"><br>
                 O seu browser não suporta o canvas<br>
                 &lt;/canvas></p>
-        </div>   
+        </div>
         <div>
             <h4>Crie um script JavaScript com o seguinte código:</h4>
             <p align="justify">var canvas = document.getElementById("canvas");<br>
@@ -75,30 +116,40 @@
                 ctx.fillStyle = "green";<br>
                 ctx.fillRect(0,0,width,height);<br>
                 //losango amarelo<br>
-                ctx.moveTo(dx,height / 2);<br> 
-                ctx.lineTo(width / 2,dy);<br> 
-                ctx.lineTo(width - dx,height / 2);<br> 
-                ctx.lineTo(width / 2,height - dy);<br> 
+                ctx.moveTo(dx,height / 2);<br>
+                ctx.lineTo(width / 2,dy);<br>
+                ctx.lineTo(width - dx,height / 2);<br>
+                ctx.lineTo(width / 2,height - dy);<br>
                 ctx.closePath();<br>
                 ctx.fillStyle = "yellow";<br>
                 ctx.fill();<br>
                 //circulo azul<br>
                 ctx.beginPath();<br>
                 ctx.arc(width / 2,height / 2,60,0, 2*Math.PI,true);<br>
-                ctx.fillStyle = "blue";<br> 
+                ctx.fillStyle = "blue";<br>
                 ctx.fill();<br>
-                </p>
-        </div>   
+            </p>
+        </div>
         <div>
-            <h3>4.	Desenvolvimento do Jogo da Velha</h3>
-            <p align="justify">O Jogo da Velha foi desenvolvido como primeiro experimento com o objetivo de testar as funcionalidades do canvas. É um jogo que não precisa renderização complexa. Uma visão geral das classes em JavaScript envolvidas é mostrada na Figura 3:</p>
+            <h3>4. Desenvolvimento do Jogo da Velha</h3>
+            <p align="justify">O Jogo da Velha foi desenvolvido como primeiro experimento com o objetivo de testar as
+                funcionalidades do canvas. É um jogo que não precisa renderização complexa. Uma visão geral das classes
+                em JavaScript envolvidas é mostrada na Figura 3:</p>
             <center><img src="artigo/image004.gif"></center>
             <h6 align="center">Figura 3: Classes do Jogo da Velha.</h6>
-            <p align="justify">A classe <i>GenericPlayer</i> é uma classe abstrata para um jogador. <i>ComputerPlayer</i> modela um jogador controlado pelo computador e joga usando um algoritmo de MiniMax baseado em [Jones 2008]. O <i>RandomicPlayer</i> é um jogador controlado pelo computador e joga aleatoriamente sem a preocupação de vencer. O <i>HumanPlayer</i> é o jogador que obedece aos comandos do jogador humano. Como o Jogo da Velha é apenas para dois jogadores, dentro do código-fonte hora é colocado o <i>ComputerPlayer</i> ora o <i>RandomicPlayer</i>. É possível ainda criar partidas de computador contra computador.</p>
-            <p align="justify">O jogo em si fica dentro da classe <i>TicTacToe</i>. A cada turno, o tabuleiro é transformado em um vetor e passado como parâmetro para o jogador controlado pelo computador. Um algoritmo então calcula a próxima jogada que é renderizada no canvas.</p>
-        </div>   
+            <p align="justify">A classe <i>GenericPlayer</i> é uma classe abstrata para um jogador.
+                <i>ComputerPlayer</i> modela um jogador controlado pelo computador e joga usando um algoritmo de MiniMax
+                baseado em [Jones 2008]. O <i>RandomicPlayer</i> é um jogador controlado pelo computador e joga
+                aleatoriamente sem a preocupação de vencer. O <i>HumanPlayer</i> é o jogador que obedece aos comandos do
+                jogador humano. Como o Jogo da Velha é apenas para dois jogadores, dentro do código-fonte hora é
+                colocado o <i>ComputerPlayer</i> ora o <i>RandomicPlayer</i>. É possível ainda criar partidas de
+                computador contra computador.</p>
+            <p align="justify">O jogo em si fica dentro da classe <i>TicTacToe</i>. A cada turno, o tabuleiro é
+                transformado em um vetor e passado como parâmetro para o jogador controlado pelo computador. Um
+                algoritmo então calcula a próxima jogada que é renderizada no canvas.</p>
+        </div>
         <div>
-            <h4>4.1	Desenhando o tabuleiro</h4>
+            <h4>4.1 Desenhando o tabuleiro</h4>
             <p align="justify">O tabuleiro é desenhado usando linhas desenhadas diretamente no canvas:</p>
             <p align="justify">TicTacToe.drawGrid = function () {<br>
                 var grid = this.ctx;<br>
@@ -112,91 +163,143 @@
                 //renderiza Grid<br>
                 grid.beginPath();<br>
                 for(var i = 1; i < 3; i++){<br>
-                linY = i * tileY + 0.5;<br>
-                linX = i * tileX + 0.5;<br>
-                grid.moveTo(0+delta,linY);<br>
-                grid.lineTo(this.canvas.widthdelta,linY);<br>
-                grid.moveTo(linX,0+delta);<br>               
-               grid.lineTo(linX,this.canvas.heightdelta);<br>
-                }<br>
-                grid.stroke();<br>
-                grid.restore();<br>
-               } <br>
-                </p>
+                    linY = i * tileY + 0.5;<br>
+                    linX = i * tileX + 0.5;<br>
+                    grid.moveTo(0+delta,linY);<br>
+                    grid.lineTo(this.canvas.widthdelta,linY);<br>
+                    grid.moveTo(linX,0+delta);<br>
+                    grid.lineTo(linX,this.canvas.heightdelta);<br>
+                    }<br>
+                    grid.stroke();<br>
+                    grid.restore();<br>
+                    } <br>
+            </p>
             <p align="justify"></p>
-        </div>   
+        </div>
         <div>
             <h4>4.2 Desenhando os “O” e “X”</h4>
-            <p align="justify">As jogadas são marcadas através de “O” e “X”. Ao invés de desenhar um círculo ou duas retas cruzadas para fazer o X , optou-se por usar a funcionalidade do canvas de trabalhar com textos. O “O” é a letra O e o “X” é a letra X usando a fonte Arial 65:</p>
+            <p align="justify">As jogadas são marcadas através de “O” e “X”. Ao invés de desenhar um círculo ou duas
+                retas cruzadas para fazer o X , optou-se por usar a funcionalidade do canvas de trabalhar com textos. O
+                “O” é a letra O e o “X” é a letra X usando a fonte Arial 65:</p>
             <p align="justify">TicTacToe.drawMark=function(pos,content){<br>
                 var symbol, color;<br>
                 switch(content){<br>
-                 case SQUARE.EMPTY:<br>
+                case SQUARE.EMPTY:<br>
                 return;<br>
-                 case SQUARE.O:<br>
-                 symbol = "O"; color="blue";break;<br>
-                  case SQUARE.X:<br>
-                 symbol = "X"; color ="red";break;<br>
-                  default:<br>
-                 symbol = "?"; color = "black";<br>
-                 }<br>
-                 var x = pos % 3, y = Math.floor(pos / 3);<br>
-                 var grid = this.ctx;<br>
-                 grid.save();<br>
-                 grid.font = "65pt Arial";<br>
-                 grid.textAlign ="center";<br>
-                 grid.textBaseline = "middle";<br>
-                 grid.fillStyle = color;<br>
-                 grid.fillText(symbol,<br>
-                  this.tileX * x + this.tileX/2,<br>
-                  this.tileY * y + this.tileY/2,<br>
-                  this.tileX);<br>
-                 grid.restore();<br>
-                 }<br>
-                </p>
+                case SQUARE.O:<br>
+                symbol = "O"; color="blue";break;<br>
+                case SQUARE.X:<br>
+                symbol = "X"; color ="red";break;<br>
+                default:<br>
+                symbol = "?"; color = "black";<br>
+                }<br>
+                var x = pos % 3, y = Math.floor(pos / 3);<br>
+                var grid = this.ctx;<br>
+                grid.save();<br>
+                grid.font = "65pt Arial";<br>
+                grid.textAlign ="center";<br>
+                grid.textBaseline = "middle";<br>
+                grid.fillStyle = color;<br>
+                grid.fillText(symbol,<br>
+                this.tileX * x + this.tileX/2,<br>
+                this.tileY * y + this.tileY/2,<br>
+                this.tileX);<br>
+                grid.restore();<br>
+                }<br>
+            </p>
             <p align="justify"></p>
-        </div>   
+        </div>
         <div>
             <h3>5. Desenvolvimento do Jogo Sukuri</h3>
-            <p align="justify">O jogo Sukuri foi desenvolvido com o propósito de analisar como o HTML5 se comportaria diante de um jogo que necessite controlar eventos e renderização constantes. Ele consiste no jogador controlar uma cobra/minhoca que se movimenta dentro de um labirinto. Seus adversários são outras cobras controladas pelo computador (cobras-robô). Cada uma delas tem o objetivo de comer uma fruta que aparece aleatoriamente no labirinto. Cada vez que uma fruta é comida, a cobra que comeu aumenta de tamanho. Se a cobra colide com a parede ou com outra cobra ela morre. As fases do jogo mudam à medida que os pontos forem avançando e com isso as cobras tornam- se cada vez mais rápidas. Essa lógica foi modelada usando as classes da Figura 4:</p>
+            <p align="justify">O jogo Sukuri foi desenvolvido com o propósito de analisar como o HTML5 se comportaria
+                diante de um jogo que necessite controlar eventos e renderização constantes. Ele consiste no jogador
+                controlar uma cobra/minhoca que se movimenta dentro de um labirinto. Seus adversários são outras cobras
+                controladas pelo computador (cobras-robô). Cada uma delas tem o objetivo de comer uma fruta que aparece
+                aleatoriamente no labirinto. Cada vez que uma fruta é comida, a cobra que comeu aumenta de tamanho. Se a
+                cobra colide com a parede ou com outra cobra ela morre. As fases do jogo mudam à medida que os pontos
+                forem avançando e com isso as cobras tornam- se cada vez mais rápidas. Essa lógica foi modelada usando
+                as classes da Figura 4:</p>
             <center><img src="artigo/image005.gif"></center>
             <h6 align="center">Figura 4: Classes do Jogo Sukuri.</h6>
-            <p align="justify">A classe Vector representa uma coordenada no mapa, controla as operações vetoriais e é usada para o “corpo” da cobras. A classe <i>Worm</i> é uma classe abstrata para criação das cobras e serve de base para criar a classe controlada pelo jogador ( <i>WormHuman</i> ) e a controlada pelo computador ( <i>WormBot</i> ). A classe <i>Nibbles</i> é o jogo em si. Ele utiliza a classe <i>Graphics</i> que encapsula o uso do canvas. A classe <i>Diamond</i> controla as frutas que a cobra come. A classe <i>Matrix</i> mapeia os labirintos</p>
-        </div>  
+            <p align="justify">A classe Vector representa uma coordenada no mapa, controla as operações vetoriais e é
+                usada para o “corpo” da cobras. A classe <i>Worm</i> é uma classe abstrata para criação das cobras e
+                serve de base para criar a classe controlada pelo jogador ( <i>WormHuman</i> ) e a controlada pelo
+                computador ( <i>WormBot</i> ). A classe <i>Nibbles</i> é o jogo em si. Ele utiliza a classe
+                <i>Graphics</i> que encapsula o uso do canvas. A classe <i>Diamond</i> controla as frutas que a cobra
+                come. A classe <i>Matrix</i> mapeia os labirintos</p>
+        </div>
         <div>
-            <h4>5.1	Algoritmo de Pathfinding</h4>
-            <p align="justify">A classe <i>WormBot</i> utiliza um algoritmo de <i>pathfind</i> para encontrar a fruta. Optou-se usar o <i>breadth-first search</i> (BFS) baseado em [Milligton 2006] por se de implementação simples.</p>
-        </div> 
+            <h4>5.1 Algoritmo de Pathfinding</h4>
+            <p align="justify">A classe <i>WormBot</i> utiliza um algoritmo de <i>pathfind</i> para encontrar a fruta.
+                Optou-se usar o <i>breadth-first search</i> (BFS) baseado em [Milligton 2006] por se de implementação
+                simples.</p>
+        </div>
         <div>
-            <h4>5.2	Técnica de Double Buffering</h4>
-            <p align="justify">Para melhorar a experiência do usuário e evitar que a tela fique piscando (<i>flickering</i>), a técnica de <i>Double Buffering</i> citada em [Lamothe 1999] foi aplicada. Ela consiste em criar um canvas secundário, desenhar nele e depois copiar as variáveis para o canvas principal. Isso evita que o jogador perceba a tela sendo desenhada a cada jogada.</p>
-        </div>  
+            <h4>5.2 Técnica de Double Buffering</h4>
+            <p align="justify">Para melhorar a experiência do usuário e evitar que a tela fique piscando
+                (<i>flickering</i>), a técnica de <i>Double Buffering</i> citada em [Lamothe 1999] foi aplicada. Ela
+                consiste em criar um canvas secundário, desenhar nele e depois copiar as variáveis para o canvas
+                principal. Isso evita que o jogador perceba a tela sendo desenhada a cada jogada.</p>
+        </div>
         <div>
             <h3>6. Considerações Finais e Trabalhos Futuros</h3>
-            <p align="justify">Este artigo mostrou a utilização de HTML5 e JavaScript para criação de dois jogos simples. O desenvolvimento ocorreu sem ajuda de plugins proprietários ou mesmo frameworks. Utilizaram-se exclusivamente linguagens e padrões abertos. Isso demonstra que a tecnologia HTML5 está despontando e deve-se ser observada com atenção pela comunidade de desenvolvimento de jogos.</p>
-            <p align="justify">O HTML 5 é uma tecnologia em desenvolvimento e por isso existem diferentes implementações em diferentes navegadores. As técnicas e funções Javascript usadas no desenvolvimento funcionaram sem problemas. Alguns testes verificaram que existe uma diferença de implementação das curvas de Belzier entre o Chrome 6 e o Firefox Beta 4. À medida que o padrão HTML 5 avança para a padronização essas diferenças deverão desaparecer.</p>
-            <p align="justify">O desenvolvimento dos jogos no experimento serviu para selecionar o HTML5 como possível interface de jogos em rede. Os próximos passos serão exploração dos recursos de áudio e vídeo do HTML5, a experimentação do WebGL e a comunicação do HTML5, usando WebSockets [ WebSockets 2010], com um servidor de desenvolvido na linguagem Erlang. Estes passos são parte de um trabalho futuro de desenvolvimento de um jogo em rede que está na sua fase inicial de modelagem, onde a implementação da interface com HTML5 pode apresentar resultados satisfatórios. Os jogos e outros experimentos encontram-se disponíveis no site <a target="_blank" href="http://www.est.uea.edu.br/ludus/html5">http://www.est.uea.edu.br/ludus/html5</a>.</p>
-        </div>  
+            <p align="justify">Este artigo mostrou a utilização de HTML5 e JavaScript para criação de dois jogos
+                simples. O desenvolvimento ocorreu sem ajuda de plugins proprietários ou mesmo frameworks. Utilizaram-se
+                exclusivamente linguagens e padrões abertos. Isso demonstra que a tecnologia HTML5 está despontando e
+                deve-se ser observada com atenção pela comunidade de desenvolvimento de jogos.</p>
+            <p align="justify">O HTML 5 é uma tecnologia em desenvolvimento e por isso existem diferentes implementações
+                em diferentes navegadores. As técnicas e funções Javascript usadas no desenvolvimento funcionaram sem
+                problemas. Alguns testes verificaram que existe uma diferença de implementação das curvas de Belzier
+                entre o Chrome 6 e o Firefox Beta 4. À medida que o padrão HTML 5 avança para a padronização essas
+                diferenças deverão desaparecer.</p>
+            <p align="justify">O desenvolvimento dos jogos no experimento serviu para selecionar o HTML5 como possível
+                interface de jogos em rede. Os próximos passos serão exploração dos recursos de áudio e vídeo do HTML5,
+                a experimentação do WebGL e a comunicação do HTML5, usando WebSockets [ WebSockets 2010], com um
+                servidor de desenvolvido na linguagem Erlang. Estes passos são parte de um trabalho futuro de
+                desenvolvimento de um jogo em rede que está na sua fase inicial de modelagem, onde a implementação da
+                interface com HTML5 pode apresentar resultados satisfatórios. Os jogos e outros experimentos
+                encontram-se disponíveis no site <a target="_blank"
+                    href="http://www.est.uea.edu.br/ludus/html5">http://www.est.uea.edu.br/ludus/html5</a>.</p>
+        </div>
         <div>
             <h3>Agradecimentos</h3>
-            <p align="justify">Os autores gostariam de agradecer o apoio da Universidade do Estado do Amazonas – UEA. Jucimar Junior agradece a Cristina Araújo por ajudar na revisão do artigo. Emiliano Firmino agradece a bolsa de pesquisa recebida da Fundação de Amparo à Pesquisa do Estado do Amazonas - FAPEAM.</p>
-        </div> 
+            <p align="justify">Os autores gostariam de agradecer o apoio da Universidade do Estado do Amazonas – UEA.
+                Jucimar Junior agradece a Cristina Araújo por ajudar na revisão do artigo. Emiliano Firmino agradece a
+                bolsa de pesquisa recebida da Fundação de Amparo à Pesquisa do Estado do Amazonas - FAPEAM.</p>
+        </div>
         <div>
             <h3>Referências</h3>
-            <p align="justify">APPLE, 2010, THOUGHTS ON FLASH, Disponível em: <br><a class="corpo"  target="_blank" href="http://www.apple.com/hotnews/thoughts-on-flash/">http://www.apple.com/hotnews/thoughts-on-flash/</a><br>[ Acessado em 1 agosto 2010]</p>
-            <p align="justify">ADOBE,2010, OPEN ACCESS TO CONTENT AND APPLICATIONS, Disponível em: <br><a class="corpo"  target="_blank" href="http://blogs.adobe.com/conversations/2010/02/open_access_to_content_and_app.html">http://blogs.adobe.com/conversations/2010/02/open_access_to_content_and_app.html</a><br> [ Acessado em 1 agosto 2010]</p>
+            <p align="justify">APPLE, 2010, THOUGHTS ON FLASH, Disponível em: <br><a class="corpo" target="_blank"
+                    href="http://www.apple.com/hotnews/thoughts-on-flash/">http://www.apple.com/hotnews/thoughts-on-flash/</a><br>[
+                Acessado em 1 agosto 2010]</p>
+            <p align="justify">ADOBE,2010, OPEN ACCESS TO CONTENT AND APPLICATIONS, Disponível em: <br><a class="corpo"
+                    target="_blank"
+                    href="http://blogs.adobe.com/conversations/2010/02/open_access_to_content_and_app.html">http://blogs.adobe.com/conversations/2010/02/open_access_to_content_and_app.html</a><br>
+                [ Acessado em 1 agosto 2010]</p>
             <p align="justify">LAMOTHE, A., 1999. Tricks of Windows Game Programming Gurus. SAMS</p>
             <p align="justify">JONES, T., 2008. Artificial Inteligenge: A Systems ApproachT. Infinity Science Press.</p>
             <p align="justify">MILLIGTON, I., 2006. Artificial Inteligence for Games. Morgan Kauffman Publisher.</p>
-            <p align="justify">OPERA, 2010, HTML 5 CANVAS – THE – BASICS, Disponível em: <br><a class="corpo"  target="_blank" href="http://dev.opera.com/articles/view/html-5-canvas-the-basics/">http://dev.opera.com/articles/view/html-5-canvas-the-basics/</a> <br>[ Acessado em 1 agosto 2010]</p>
-            <p align="justify">WEBGL, 2010, WEBGL, Disponível em: <br><a class="corpo"  target="_blank" href="http://www.khronos.org/webgl/">http://www.khronos.org/webgl/</a><br> [ Acessado em 1 agosto 2010]</p>
-            <p align="justify">WEBKIT, 2010,WEBKIT DOM PROGRAMMING TOPICS: USING THE CANVAS, Disponível em: <br><a class="corpo"  target="_blank" href="http://developer.apple.com/mac/library/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Tasks/Canvas.html">http://developer.apple.com/mac/library/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Tasks/Canvas.html</a> <br>[ Acessado em 1 agosto 2010]</p>
-            <p align="justify">WEBSOCKET, 2010, WEBSOCKETS, Disponível em: <br><a class="corpo"  target="_blank" href="http://dev.w3.org/html5/websockets/">http://dev.w3.org/html5/websockets/</a> <br>[ Acessado em 1 agosto 2010]</p>
-            <p align="justify">W3C,2010, HTML5 CANVAS TAG, Disponível em: <br><a class="corpo"  target="_blank" href="http://www.w3schools.com/html5/tag_canvas.asp">http://www.w3schools.com/html5/tag_canvas.asp</a> <br>[ Acessado em 2 agosto 2010]</p>
-            <p align="justify">WHATWG, 2009, FAQ – WHATWG WIKI, Disponível em: <br><a class="corpo"  target="_blank" href="http://wiki.whatwg.org/wiki/FAQ">http://wiki.whatwg.org/wiki/FA</a><br>[ Acessado em 1 agosto 2010]</p>
-        </div> 
+            <p align="justify">OPERA, 2010, HTML 5 CANVAS – THE – BASICS, Disponível em: <br><a class="corpo"
+                    target="_blank"
+                    href="http://dev.opera.com/articles/view/html-5-canvas-the-basics/">http://dev.opera.com/articles/view/html-5-canvas-the-basics/</a>
+                <br>[ Acessado em 1 agosto 2010]</p>
+            <p align="justify">WEBGL, 2010, WEBGL, Disponível em: <br><a class="corpo" target="_blank"
+                    href="http://www.khronos.org/webgl/">http://www.khronos.org/webgl/</a><br> [ Acessado em 1 agosto
+                2010]</p>
+            <p align="justify">WEBKIT, 2010,WEBKIT DOM PROGRAMMING TOPICS: USING THE CANVAS, Disponível em: <br><a
+                    class="corpo" target="_blank"
+                    href="http://developer.apple.com/mac/library/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Tasks/Canvas.html">http://developer.apple.com/mac/library/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Tasks/Canvas.html</a>
+                <br>[ Acessado em 1 agosto 2010]</p>
+            <p align="justify">WEBSOCKET, 2010, WEBSOCKETS, Disponível em: <br><a class="corpo" target="_blank"
+                    href="http://dev.w3.org/html5/websockets/">http://dev.w3.org/html5/websockets/</a> <br>[ Acessado em
+                1 agosto 2010]</p>
+            <p align="justify">W3C,2010, HTML5 CANVAS TAG, Disponível em: <br><a class="corpo" target="_blank"
+                    href="http://www.w3schools.com/html5/tag_canvas.asp">http://www.w3schools.com/html5/tag_canvas.asp</a>
+                <br>[ Acessado em 2 agosto 2010]</p>
+            <p align="justify">WHATWG, 2009, FAQ – WHATWG WIKI, Disponível em: <br><a class="corpo" target="_blank"
+                    href="http://wiki.whatwg.org/wiki/FAQ">http://wiki.whatwg.org/wiki/FA</a><br>[ Acessado em 1 agosto
+                2010]</p>
+        </div>
     </div>
 </body>
 <html>
-
-    
