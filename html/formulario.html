@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <style>
+        #forms {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: #F2F2F2;
+        }
+
+        #titulo {
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #filmes {
+            margin: 0;
+        }
+
+        #divesquerda {
+            width: 49%;
+            display: inline-block;
+        }
+
+        #divdireita {
+            width: 50%;
+            display: inline-block;
+        }
+
+        #falevc {
+            width: 98%;
+            height: 200px;
+        }
+
+        #enviar {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #reset {
+            width: 20%;
+            display: inline-block;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #submit {
+            width: 20%;
+            display: inline-block;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            width: 50%;
+        }
+
+        form div {
+            margin-top: 4px;
+        }
+
+        input,
+        select {
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        label,
+        input {
+            font-family: arial, verdana;
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+
+        legend {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        fieldset {
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="forms">
+        <form>
+            <div id="titulo">
+                <h1>Cadastro</h1>
+            </div>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div>
+                    <label for="nome">
+                        Nome:
+                    </label>
+                </div>
+                <div>
+                    <input type="text" name="nome" id="nome" value="" size="50" alt="Nome completo"
+                        title="Nome completo" required="true" placeholder="Digite nome completo">
+                </div>
+                <div>
+                    <label for="cpf">
+                        CPF:
+                    </label>
+                </div>
+                <div>
+                    <input type="text" name="cpf" id="cpf" value="" size="14" alt="CPF" title="CPF"
+                        placeholder="Ex.: 000.000.000-00" required="true">
+                </div>
+                <div>
+                    <label for="estado">
+                        Estado:
+                    </label>
+                </div>
+                <div>
+                    <select name="estado" id="estado" alt="Estado" title="Estado" required="true">
+                        <option>Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Escolha o Genêro</legend>
+                <div>
+                    <label for="genero">
+                        Genêro:
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="genero" id="Masc" value="M" alt="Genêro Masculino"
+                        title="Genêro Masculino">Masculino<br>
+                    <input type="radio" name="genero" id="Fem" value="F" alt="Genêro Feminino"
+                        title="Genêro Feminino">Feminino<br>
+                    <input type="radio" name="genero" id="NINF" value="N" alt="Não informar" title="Não informar">Não
+                    informar<br>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Filiação</legend>
+                <div>
+                    <label for="nomepai">
+                        Nome pai:
+                    </label>
+                </div>
+                <div>
+                    <input type="text" name="nomepai" id="nomepai" value="" size="50" alt="Nome pai" title="Nome pai"
+                        placeholder="Digite nome de seu pai">
+                </div>
+                <div>
+                    <label for="nomemae">
+                        Nome mãe:
+                    </label>
+                </div>
+                <div>
+                    <input type="text" name="nomemae" id="nomemae" value="" size="50" alt="Nome mãe" title="Nome mãe"
+                        placeholder="Digite nome de sua mãe">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Qual estação e fruta você gosta?</legend>
+                <div>
+                    <label for="fruta">
+                        Selecione a estação e fruta:
+                    </label>
+                </div>
+                <div>
+                    <select name="fruta" id="fruta" alt="Escolha estação e fruta" title="Escolha estação e fruta">
+                        <option>Selecione</option>
+                        <optgroup label="Verão">
+                            <option>Laranja</option>
+                            <option>Banana</option>
+                            <option>Uva</option>
+                            <option>Abacaxi</option>
+                        </optgroup>
+                        <optgroup label="Outono">
+                            <option>Manga</option>
+                            <option>Melancia</option>
+                            <option>Mamão</option>
+                            <option>Maça</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Gêneros cinematográficos</legend>
+                <div id="filmes">
+                    <div id="divesquerda">
+                        <input type="checkbox" id="filme1" name='Ação'>Ação</input><br>
+                        <input type="checkbox" id="filme2" name='Animação'>Animação</input><br>
+                        <input type="checkbox" id="filme3" name="Aventura">Aventura</input><br>
+                        <input type="checkbox" id="filme4" name="Comédia">Comédia</input><br>
+                        <input type="checkbox" id="filme5" name="Comédia romântica">Comédia romântica</input><br>
+                        <input type="checkbox" id="filme6" name="Comédia de ação">Comédia de ação</input><br>
+                        <input type="checkbox" id="filme7" name="Cult">Cult</input><br>
+                        <input type="checkbox" id="filme8" name="Dança">Dança</input><br>
+                        <input type="checkbox" id="filme9" name="Documentários">Documentários</input><br>
+                        <input type="checkbox" id="filme10" name="Drama">Drama</input><br>
+                        <input type="checkbox" id="filme11" name="Espionagem">Espionagem</input><br>
+                    </div>
+                    <div id="divdireita">
+                        <input type="checkbox" id="filme12" name="Fantasia">Fantasia</input><br>
+                        <input type="checkbox" id="filme13" name="Faroeste">Faroeste / western</input><br>
+                        <input type="checkbox" id="filme14" name="Ficção Científica">Ficção Científica</input><br>
+                        <input type="checkbox" id="filme15" name="Franchise/Séries">Séries / Franchise</input><br>
+                        <input type="checkbox" id="filme16" name="Guerra">Guerra</input><br>
+                        <input type="checkbox" id="filme17" name="Machinima">Machinima</input><br>
+                        <input type="checkbox" id="filme18" name="Musical">Musical</input><br>
+                        <input type="checkbox" id="filme19" name="Policial">Policial</input><br>
+                        <input type="checkbox" id="filme20" name="Romance">Romance</input><br>
+                        <input type="checkbox" id="filme21" name="Suspense">Suspense</input><br>
+                        <input type="checkbox" id="filme22" name="Terror / Horror">Terror / Horror</input><br>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Fale de você</legend>
+                <div>
+                    <textarea id="falevc" alt="Fale de você" title="Fale de você"
+                        placeholder="Escreva um pouco sobre você" required="true"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Login e Senha</legend>
+                <div>
+                    <label for="login">Login:</label>
+                    <div>
+                        <input type="text" name="login" id="login" value="" size="20" alt="Digite seu Login"
+                            title="Digite seu Login" placeholder="Digite seu Login" required="true">
+                    </div>
+                </div>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <div>
+                        <input type="password" name="senha" id="senha" value="" size="20" alt="Digite sua senha"
+                            title="Digite sua senha" placeholder="Digite sua senha" required="true">
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <div id="enviar">
+                <div id="reset">
+                    <input type="reset" value="Limpar">
+                </div>
+                <div id="submit">
+                    <input type="submit" value="Enviar">
+                </div>
+            </div>
+
+            <br><br>
+        </form>
+    </div>
+</body>
+
+</html>
