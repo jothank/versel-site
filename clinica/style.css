@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: white;
+}
+
+.text {
+  width: 100%;
+  text-align: center;
+  margin-top: 10%;
+  font-size: 3em;
+  color: #212539;
+  font-weight: 800;
+}
+
+.link {
+    text-align: center;
+    margin-top: 7%;
+    font-size: 1.2em;
+}
+
+.inicial {
+    width: 700px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+    font-size: 2em;
+    color: #212539;
+    font-weight: 650;
+  }
+
+.menu-tab {
+  width: 90px;
+  height: 70px;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+  /*end of div*/
+}
+.menu-tab div {
+  width: 33px;
+  height: 4px;
+  background-color: #212539;
+  display: block;
+  margin: 5px 28px;
+  transition: all 0.6s ease-in-out;
+}
+.menu-tab div:nth-child(1) {
+  margin-top: 20px;
+}
+
+/*end of menu-tab*/
+.menu-tab.active {
+  left: 345px;
+  transition: all 600ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.menu-tab.active #one {
+  transform: translateY(9px) rotate(-135deg);
+  transition: all 0.6s ease-in-out;
+  background-color: #D1626E;
+}
+.menu-tab.active #two {
+  opacity: 0;
+  transition: 0.4s ease;
+}
+.menu-tab.active #three {
+  transform: translateY(-9px) rotate(-45deg);
+  transition: all 0.6s ease-in-out;
+  background-color: #D1626E;
+}
+
+.menu-hide {
+  width: 345px;
+  left: -345px;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  background-color: #D1626E;
+  transition: all 0.6s ease-in-out;
+  /*end of nav*/
+}
+
+  
+.menu-hide nav ul li {
+  height: 70px;
+  list-style-type: none;
+  text-align: center;
+  line-height: 70px;
+  transition: all 0.5s ease;
+  background-color: #D1626E;
+}
+.menu-hide nav ul li:hover {
+  background-color: #E68C95;
+  transition: all 0.5s ease;  
+}
+.menu-hide nav ul li a {
+  padding: 30px 25px;
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 800;
+}
+
+/*end of menu-hide*/
+.menu-hide.show {
+  left: 0px;
+  background-color: #D1626E;
+  transition: all 0.6s ease-in-out;
+}
