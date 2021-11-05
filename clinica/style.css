@@ -110,6 +110,8 @@ body {
 .rodape {
   position: absolute;
   text-align: center;
+  margin-top: 7%;
+  font-size: 1.2em;
 	bottom: 0;
 }
 
