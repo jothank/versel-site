@@ -81,7 +81,6 @@ body {
   width: 345px;
   left: -345px;
   height: 100vh;
-  position: fixed;
   z-index: 10;
   top: 0px;
   background-color: #D1626E;
@@ -107,7 +106,7 @@ body {
   color: #f1f1f1;
   font-weight: 800;
 }
-.rodape menu-hide{
+.rodape {
   position: absolute;
 	bottom: 0;
 }
