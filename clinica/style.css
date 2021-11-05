@@ -107,17 +107,10 @@ body {
   color: #f1f1f1;
   font-weight: 800;
 }
-.rodape {
-  width: 345px;
-  left: -345px;
-  height: 100vh;
-  z-index: 10;
+.rodape menu-hide{
   position: absolute;
 	bottom: 0;
-  top: 0px;
-  background-color: #D1626E;
-  transition: all 0.6s ease-in-out;
-	}
+}
 
 /*end of menu-hide*/
 .menu-hide.show {
