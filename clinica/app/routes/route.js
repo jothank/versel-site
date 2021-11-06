@@ -2,19 +2,19 @@ app.config(function($routeProvider, $locationProvider) {
 
     $routeProvider
 
-        .when('/', {
-        templateUrl: 'clinica/app/views/home.html',
-        controller: 'HomeCtrl',
+        .when('/gencon', {
+        templateUrl: 'clinica/app/views/gencon.html',
+        controller: 'gencon',
     })
 
-    .when('/about', {
-        templateUrl: 'clinica/app/views/about.html',
-        controller: 'AboutCtrl',
+    .when('/genfun', {
+        templateUrl: 'clinica/app/views/genfun.html',
+        controller: 'genfun',
     })
 
-    .when('/contact', {
-        templateUrl: 'clinica/app/views/contact.html',
-        controller: 'ContactCtrl',
+    .when('/genpac', {
+        templateUrl: 'clinica/app/views/genpac.html',
+        controller: 'genpac',
     })
 
     .otherwise({ redirectTo: '/' });
